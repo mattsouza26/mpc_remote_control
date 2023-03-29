@@ -1,10 +1,13 @@
-import 'package:flutter/gestures.dart';
+import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AppAboutDialog extends StatelessWidget {
   const AppAboutDialog({super.key});
 
-  void _onTap() {}
+  void _onTap() {
+    launchUrl(Uri.parse("https://github.com/mattsouza26/mpc_remote_control"), mode: LaunchMode.externalApplication);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +41,7 @@ class AppAboutDialog extends StatelessWidget {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 15),
+            padding: const EdgeInsets.only(top: 5),
             child: ListBody(
               children: [
                 const Text(
@@ -48,26 +51,23 @@ class AppAboutDialog extends StatelessWidget {
                 const Text(
                   "As an open source project, you can view the source code for this App on GitHub. My hope is that this application will serve as a learning resource for other Flutter developers who are just starting out.",
                 ),
-                const SizedBox(height: 5),
-                RichText(
-                  text: TextSpan(
-                    text: "Github: ",
-                    style: Theme.of(context).textTheme.bodyMedium,
-                    children: [
-                      TextSpan(
-                        text: "https://github.com/mattsouza26/mpc_remote_control",
-                        recognizer: TapGestureRecognizer()..onTap = _onTap,
-                        style: const TextStyle(
-                          color: Color(0xff0000EE),
+                const SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(CommunityMaterialIcons.github),
+                    const SizedBox(width: 5),
+                    GestureDetector(
+                      onTap: _onTap,
+                      child: const Text(
+                        "Check on GitHub.",
+                        style: TextStyle(
+                          color: Color(0xFF007AFF),
                           decoration: TextDecoration.underline,
                         ),
                       ),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 10),
-                const Text(
-                  "Thank you. ",
+                    )
+                  ],
                 ),
               ],
             ),

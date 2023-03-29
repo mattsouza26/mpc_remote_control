@@ -55,6 +55,7 @@ dependencies:
   keep_screen_on: ^2.1.0
   flutter_native_splash: ^2.2.19
   community_material_icon: ^5.9.55
+  url_launcher: ^6.1.10
   
 dev_dependencies:
   flutter_test:

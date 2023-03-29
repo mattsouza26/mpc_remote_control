@@ -19,7 +19,6 @@ import 'widgets/controller_media_button/controller_media_button.dart';
 import 'widgets/controller_media_button/gesture_area.dart';
 import 'widgets/controller_section.dart';
 import 'widgets/controller_volume_button.dart';
-
 part 'widgets/home_app_bar.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -108,12 +107,14 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final screenSize = ScreenUtils().screenSize(context);
-    final horizontalPadding = (screenSize.width * 0.06).roundToDouble();
+    final screenSize = Size(ScreenUtils().screenSize(context).width, ScreenUtils().screenSize(context).height - ScreenUtils().navigationBarHeight(context));
+    final padding = EdgeInsets.only(top: 0, left: (screenSize.width * 0.075).roundToDouble(), right: (screenSize.width * 0.075).roundToDouble(), bottom: 10);
+
+    final buttonMargin = EdgeInsets.only(top: screenSize.height * 0.025);
+
     final middleButtonSize = (screenSize.height * 0.3).roundToDouble();
-    final smallButtonSize = (middleButtonSize * 0.37).roundToDouble();
+    final smallButtonSize = (middleButtonSize * 0.35).roundToDouble();
     final volumeButtonSize = (smallButtonSize * 2.25).roundToDouble();
-    const buttonMargin = EdgeInsets.only(top: 20);
 
     return GestureDetector(
       onTap: _hideFlexibleAppBar,
@@ -144,8 +145,9 @@ class _HomeScreenState extends State<HomeScreen> {
               hasScrollBody: false,
               child: Container(
                 alignment: Alignment.center,
-                padding: EdgeInsets.only(left: horizontalPadding, right: horizontalPadding, top: 5),
+                padding: padding,
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     ControllerSection(
                       padding: const EdgeInsets.only(top: 5),
@@ -207,7 +209,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ],
                         ),
                         ControllerSection(
-                          startMargin: EdgeInsets.only(top: smallButtonSize * 0.75),
+                          startMargin: EdgeInsets.only(top: smallButtonSize * 0.7),
                           margin: buttonMargin,
                           children: [
                             AnimatedBuilder(
@@ -253,7 +255,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ],
                         ),
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),

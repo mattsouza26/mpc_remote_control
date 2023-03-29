@@ -33,7 +33,7 @@ class _HomeAppBarState extends State<HomeAppBar> with TickerProviderStateMixin {
     );
     _animationHeight = Tween<double>(
       begin: 0,
-      end: widget.expandedHeight + WidgetsBinding.instance.window.padding.top,
+      end: widget.expandedHeight + ScreenUtils().appBarHeight(context),
     )
         .chain(CurveTween(curve: Curves.elasticInOut)) //
         .animate(_animationController);
@@ -90,15 +90,20 @@ class _HomeAppBarState extends State<HomeAppBar> with TickerProviderStateMixin {
           floating: true,
           centerTitle: true,
           title: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              const Spacer(flex: 10),
-              Text(
-                "MPC Remote Control",
-                style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 20,
-                    ),
+              Expanded(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    "MPC Remote Control",
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                          fontWeight: FontWeight.w700,
+                          fontSize: 20,
+                        ),
+                  ),
+                ),
               ),
               AnimatedBuilder(
                 animation: _animationRotateController,
@@ -106,7 +111,6 @@ class _HomeAppBarState extends State<HomeAppBar> with TickerProviderStateMixin {
                   return Transform.rotate(
                     angle: _animationRotateController.value * pi,
                     child: IconButton(
-                      padding: const EdgeInsets.symmetric(horizontal: 15),
                       hoverColor: Colors.transparent,
                       splashColor: Colors.transparent,
                       highlightColor: Colors.transparent,
@@ -119,7 +123,6 @@ class _HomeAppBarState extends State<HomeAppBar> with TickerProviderStateMixin {
                   );
                 },
               ),
-              const Spacer(),
             ],
           ),
           expandedHeight: _animationHeight.value,

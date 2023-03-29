@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
 import 'package:mpc_remote_control/app/core/services/device_handler/device_handler_service.dart';
 
@@ -71,6 +72,13 @@ class _AppState extends State<App> {
   void _updateTheme() {
     setState(() {
       _appTheme = _settingsController.appTheme.value;
+    });
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(
+          systemNavigationBarColor: _appTheme == ThemeMode.dark ? const Color.fromRGBO(10, 10, 10, 1) : const Color.fromRGBO(250, 250, 250, 1),
+        ),
+      );
     });
   }
 
@@ -160,7 +168,7 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: true,
       themeMode: _appTheme,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
