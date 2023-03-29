@@ -18,7 +18,6 @@ class AppRoute {
   static const manageServersScreen = "${_initialRoute}manage-servers-screen";
   static const fileBrowserScreen = "${_initialRoute}file-browser-screen";
 
-  static GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
   static final GoRouter routes = GoRouter(
     redirect: (context, state) {
       final isFirstOpening = GetIt.I.get<SettingsController>().isFirstOpening.value;
