@@ -168,6 +168,7 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      scrollBehavior: const MaterialScrollBehavior().copyWith(overscroll: false, physics: const ClampingScrollPhysics()),
       debugShowCheckedModeBanner: true,
       themeMode: _appTheme,
       theme: AppTheme.lightTheme,

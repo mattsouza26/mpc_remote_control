@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class ScreenUtils {
@@ -16,11 +14,11 @@ class ScreenUtils {
   }
 
   double navigationBarHeight(BuildContext context) {
-    return window.padding.bottom;
+    return MediaQuery.of(context).padding.bottom;
   }
 
   Size screenSize(BuildContext context) {
-    final size = window.physicalSize / window.devicePixelRatio;
+    final size = MediaQuery.of(context).size;
     return Size(size.width, (size.height - appBarHeight(context)));
   }
 }
