@@ -20,7 +20,8 @@ The app uses the MPC Web Interface to communicate with the MPC player, so make s
 
 |       |       |
 |:------|------:|
-![](https://user-images.githubusercontent.com/74125222/236628846-5b3bb8d8-e055-48ac-baeb-d9838226b309.png)|![](https://user-images.githubusercontent.com/74125222/236628419-58108ac1-473c-4ba7-9261-875f3d8ca2b6.gif)|![](https://user-images.githubusercontent.com/74125222/236628876-0e295733-4abb-4296-b8a6-2176badfc70b.png)|![](https://user-images.githubusercontent.com/74125222/236628499-7af30f3f-d11e-436d-bf3d-a88ecd270594.gif)
+![](https://user-images.githubusercontent.com/74125222/236629281-e3fa5b29-81fc-495c-86b4-97054485d741.gif)|![](https://user-images.githubusercontent.com/74125222/236630345-336449b0-4b31-48f7-bb5a-a4a4bdc2e8c3.gif)|
+![](https://user-images.githubusercontent.com/74125222/236630830-39472fb8-34bb-48f3-8000-cb07ef11a259.gif)|![](https://user-images.githubusercontent.com/74125222/236628499-7af30f3f-d11e-436d-bf3d-a88ecd270594.gif)
 
 
 
