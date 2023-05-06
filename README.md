@@ -20,8 +20,8 @@ The app uses the MPC Web Interface to communicate with the MPC player, so make s
 
 |       |       |
 |:------|------:|
-<img src="https://user-images.githubusercontent.com/74125222/236629281-e3fa5b29-81fc-495c-86b4-97054485d741.gif" width="250">|<img src="https://user-images.githubusercontent.com/74125222/236630345-336449b0-4b31-48f7-bb5a-a4a4bdc2e8c3.gif" width="250">
-<img src="https://user-images.githubusercontent.com/74125222/236630830-39472fb8-34bb-48f3-8000-cb07ef11a259.gif" width="250">|<img src="https://user-images.githubusercontent.com/74125222/236628499-7af30f3f-d11e-436d-bf3d-a88ecd270594.gif" width="250">|
+<img src="https://user-images.githubusercontent.com/74125222/236629281-e3fa5b29-81fc-495c-86b4-97054485d741.gif" width="33%">|<img src="https://user-images.githubusercontent.com/74125222/236630345-336449b0-4b31-48f7-bb5a-a4a4bdc2e8c3.gif" width="33%">
+<img src="https://user-images.githubusercontent.com/74125222/236630830-39472fb8-34bb-48f3-8000-cb07ef11a259.gif" width="33%">|<img src="https://user-images.githubusercontent.com/74125222/236628499-7af30f3f-d11e-436d-bf3d-a88ecd270594.gif" width="33%">|
 
 
 
