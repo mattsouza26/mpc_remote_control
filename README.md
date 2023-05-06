@@ -11,7 +11,7 @@ MPC Remote Control lets you control MPC using your smartphone or tablet. You can
 The app uses the MPC Web Interface to communicate with the MPC player, so make sure you have it enabled in MPC's options.
 
 ## Features
-- Create custom commands besides defautl commands.
+- Create custom commands besides default commands.
 - Allow to control MPC using Notification.
 - Navigate to files and open it.
 - Find MPC servers and manager servers.
